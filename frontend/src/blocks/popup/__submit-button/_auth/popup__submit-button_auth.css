@@ -1,0 +1,25 @@
+  .popup__submit-button_auth {
+    margin: 216px auto 0 auto;
+    width: 28%;
+    max-width: 358px;
+    height: 50px;
+    background: #FFFFFF;
+    color: #000000;
+    transition: opacity 0.5s ease-in-out;
+  }
+  .popup__submit-button_auth:hover{
+    opacity: 0.85;
+  }
+  @media (max-width: 1000px){
+    .popup__submit-button_auth {
+      margin-top: 176px;
+      width: 51.25%;
+    }
+  }
+  @media (max-width: 500px){
+    .popup__submit-button_auth {
+      width: 81.25%;
+      font-size: 16px;
+      line-height: 19px;
+    }
+  }

@@ -1,0 +1,18 @@
+.popup{
+  font-family: 'Inter', Arial, sans-serif;
+  position: fixed;
+  color: #000000;
+  background: rgba(0, 0, 0, 0.5);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+ /* display: none;*/
+  justify-content: center;
+  align-items: start;
+  z-index: 100;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0.5s, opacity 0.5s;
+  
+}

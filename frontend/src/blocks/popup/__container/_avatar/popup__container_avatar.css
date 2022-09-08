@@ -1,0 +1,26 @@
+.popup__container_avatar{
+  position: relative;
+  min-height: 272px;
+  width: 34.4%;
+  max-width: 430px;
+  margin: 224px auto 0 auto;
+  padding: 0; 
+}
+@media (max-width: 800px){
+  .popup__container_avatar{
+    width: 68.12%;
+    max-width: 68.12%;
+  }
+}
+@media (max-width: 500px){
+  .popup__container_avatar{
+    width: 78.12%;
+    max-width: 78.12%;
+}
+}
+@media (max-width: 320px){
+  .popup__container_avatar{
+    width: 88.125%;
+    max-width: 88.125%;
+  }
+}

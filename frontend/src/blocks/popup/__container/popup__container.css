@@ -1,0 +1,28 @@
+.popup__container{
+  position: relative;
+  min-height: 330px;
+  width: 34.4%;
+  max-width: 430px;
+  margin: 195px auto 0 auto;
+  padding: 0; 
+}
+@media (max-width: 800px){
+  .popup__container{
+    width: 68.12%;
+    max-width: 68.12%;
+  }
+}
+@media (max-width: 500px){
+  .popup__container{
+    min-height: 322px;
+    width: 78.12%;
+    max-width: 78.12%;
+    margin: 123px 0 0 0;
+  }
+}
+@media (max-width: 320px){
+  .popup__container{
+    width: 88.125%;
+    max-width: 88.125%;
+  }
+}

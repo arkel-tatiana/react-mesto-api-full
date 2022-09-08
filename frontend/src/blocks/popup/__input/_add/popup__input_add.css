@@ -1,0 +1,6 @@
+.popup__input_add{
+  color:#C4C4C4;
+}
+.popup__input_add:focus{
+  color: #000000;
+}

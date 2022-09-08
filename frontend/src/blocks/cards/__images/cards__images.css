@@ -1,0 +1,4 @@
+.cards__images{
+  position: relative;
+  grid-area: image;
+}

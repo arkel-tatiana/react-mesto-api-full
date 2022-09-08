@@ -1,0 +1,15 @@
+.popup__logoOk{
+  width: 120px;
+  height: 120px;
+  margin-top: 60px;
+  background-size: 100% 100%;
+  background-image: url(../../../images/UnionOk.svg);
+}
+@media (max-width: 400px){
+  .popup__logoOk {
+    width: 103px;
+    height: 24.4px;
+    margin-left:27px;
+    background-size: 103px 24.4px;
+  }
+}

@@ -1,0 +1,10 @@
+.header__content-login{
+  display: none;
+  justify-content: flex-end;
+  margin: 0 auto 0 auto;
+}
+@media (max-width: 500px){
+    .header__content-login {
+      flex-direction: column;
+    }
+}

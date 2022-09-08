@@ -1,0 +1,18 @@
+.header__button-exit{
+  border: none;
+  outline: none;
+  font-size: 18px;
+  line-height: 22px;
+  color: #A9A9A9;
+  cursor: pointer;
+  width: 56px;
+  max-width: 56px;
+  margin: 0 0 0 24px;
+  padding: 0;
+  background-color:#000000;
+}
+@media (max-width: 500px){
+  .header__button-exit {
+    margin: 18px 0 0 0;
+  }
+}

@@ -1,0 +1,11 @@
+.profile__container{
+  display: flex;
+  width: 55.34%;
+}
+@media (max-width: 500px){
+  .profile__container{
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+}

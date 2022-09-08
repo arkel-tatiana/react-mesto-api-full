@@ -1,0 +1,33 @@
+.profile__avatar{
+  min-width: 120px;
+  min-height: 120px;
+  max-width: 120px;
+  max-height: 120px;
+  border-radius: 50%;
+  background-color:#000000;
+  box-sizing: border-box;
+  margin-right: 26.25px;
+  transition: opacity 0.5s ease-in-out;
+  object-fit: cover;
+}
+.profile__avatar:hover{
+  opacity: 0.6;
+}
+@media (max-width: 800px){
+  .profile__avatar{
+    margin-right: 10px;
+    min-width: 100px;
+    min-height: 100px;
+    max-width: 100px;
+    max-height: 100px;
+  }
+}
+@media (max-width: 500px){
+  .profile__avatar{
+    min-width: 120px;
+    min-height: 120px;
+    max-width: 120px;
+    max-height: 120px;
+    margin: 0 auto 20px auto;
+  }
+}

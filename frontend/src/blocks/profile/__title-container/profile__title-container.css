@@ -1,0 +1,9 @@
+.profile__title-container{
+  display: flex;
+}
+@media (max-width: 500px){
+  .profile__title-container{
+    margin-left: 30px;
+    justify-content: center;
+  }
+}
