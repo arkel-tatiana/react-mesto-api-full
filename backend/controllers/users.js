@@ -48,6 +48,7 @@ const getUserCurrent = (req, res, next) => {
 };
 
 const getUser = (req, res, next) => {
+  console.log(111);
   User.findById(req.params.userId)
     .then((user) => {
       if (user) {

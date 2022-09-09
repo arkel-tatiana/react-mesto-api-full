@@ -1,10 +1,19 @@
 const router = require('express').Router();
 const { celebrate, Joi } = require('celebrate');
+const { isValidObjectId } = require('mongoose');
 const { auth } = require('../middlewares/auth');
 const {
   getCards, deleteCard, createCard, likeCard, dislikeCard,
 } = require('../controllers/cards');
+const ValidationError = require('../error/ValidationError');
 
+const castErorr = (value) => {
+  if (!isValidObjectId(value)) {
+    throw new ValidationError('Введены некорректные данные');
+  } else {
+    return value;
+  }
+};
 router.get('/', auth, getCards);
 router.post('/', auth, celebrate({
   body: Joi.object().keys({
@@ -14,17 +23,17 @@ router.post('/', auth, celebrate({
 }), createCard);
 router.delete('/:cardId', auth, celebrate({
   params: Joi.object().keys({
-    cardId: Joi.string().alphanum().length(24),
+    cardId: Joi.string().custom(castErorr, 'custom validation'),
   }),
 }), deleteCard);
 router.put('/:cardId/likes', auth, celebrate({
   params: Joi.object().keys({
-    cardId: Joi.string().alphanum().length(24),
+    cardId: Joi.string().custom(castErorr, 'custom validation'),
   }),
 }), likeCard);
 router.delete('/:cardId/likes', auth, celebrate({
   params: Joi.object().keys({
-    cardId: Joi.string().alphanum().length(24),
+    cardId: Joi.string().custom(castErorr, 'custom validation'),
   }),
 }), dislikeCard);
 

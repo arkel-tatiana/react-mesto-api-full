@@ -12,7 +12,7 @@ const NotFoundError = require('./error/NotFoundError');
 
 const options = {
   origin: [
-    'http://localhost:3000',
+    'http://localhost:3010',
     'https://arkel.students.nomoredomains.sbs',
     'https://github.com/arkel-tatiana/react-mesto-api-full.git',
   ],
@@ -25,7 +25,7 @@ const options = {
 
 const app = express();
 app.use('*', cors(options));
-const { PORT = 3010 } = process.env;
+const { PORT = 3000 } = process.env;
 app.use(cookieParser());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));

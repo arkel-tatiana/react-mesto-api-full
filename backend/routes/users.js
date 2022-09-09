@@ -1,17 +1,27 @@
 const router = require('express').Router();
 const { celebrate, Joi } = require('celebrate');
+const { isValidObjectId } = require('mongoose');
 const { auth } = require('../middlewares/auth');
 const {
   getUsers, getUserCurrent, getUser, updateUser, updateUserAvatar,
 } = require('../controllers/users');
+const ValidationError = require('../error/ValidationError');
 
+const castErorr = (value) => {
+  if (!isValidObjectId(value)) {
+    throw new ValidationError('Введены некорректные данные');
+  } else {
+    return value;
+  }
+};
 router.get('/', auth, getUsers);
 router.get('/me', auth, getUserCurrent);
 router.get('/:userId', auth, celebrate({
   params: Joi.object().keys({
-    userId: Joi.string().alphanum().length(24),
+    userId: Joi.string().custom(castErorr, 'custom validation'),
   }),
 }), getUser);
+
 router.patch('/me', auth, celebrate({
   body: Joi.object().keys({
     name: Joi.string().min(2).max(30),
